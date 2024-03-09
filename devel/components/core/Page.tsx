@@ -30,8 +30,9 @@ const Page: NextPage<PageI> = props => {
           <link rel="icon" href="/favicon.ico" />
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
       </Head>
-      {!device.isMobile && props.children}
-      {device.isMobile && <_Temp />}
+      {false && !device.isMobile && props.children}
+      {false && device.isMobile && <_Temp />}
+      {props.children}
     </div>
   )
 }
